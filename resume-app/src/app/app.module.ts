@@ -6,7 +6,6 @@ import { HeaderComponent } from './header/header.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +14,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ProjectsComponent
   ],
   imports: [
-    NgbModule.forRoot(),
     BrowserModule
   ],
   providers: [],
