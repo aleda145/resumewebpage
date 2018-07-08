@@ -35,3 +35,7 @@
 }
 
 */
+.view-button {
+  border-right: none;
+  padding-right: 0;
+}
