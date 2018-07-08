@@ -1,16 +1,16 @@
 .profile-card {
-  width: 70%;
+  width: 80%;
   margin-top: 5rem;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .2), 0 5px 20px 0 rgba(0, 0, 0, .19);
   border: 2px red;
   background-color: #fff;
-  /*  margin: -15rem auto 0;*/
-  height: 25rem;
+  margin: -10rem auto 0;
   border-radius: 1rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  padding: 1rem;
 }
 
 .card-info {
@@ -28,14 +28,7 @@
   padding-right: .5rem;
 }
 
-/*
 .heading {
-    height: 10rem;
-    background-color: #1f5694;
-}
-
-*/
-.view-button {
-  border-right: none;
-  padding-right: 0;
+  height: 15rem;
+  background-color: #1f5694;
 }
