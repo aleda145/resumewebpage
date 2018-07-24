@@ -1,6 +1,14 @@
-FROM nginx:alpine
+FROM node
 
-COPY nginx.conf /etc/nginx/nginx.conf
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
 
-WORKDIR /usr/share/nginx/html
-COPY /resume-app/dist/resume-app .
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+COPY resume-app/package.json /usr/src/app/package.json
+RUN npm install
+RUN npm install @angular/cli
+
+COPY . /usr/src/app
+
+CMD ng serve --host 0.0.0.0
