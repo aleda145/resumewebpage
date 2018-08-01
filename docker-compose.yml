@@ -1,13 +1,8 @@
-version: '3.5'
+version: '3.1'
 
 services:
-    resume-app:
-      container_name : resume-app
-      build:
-        context: .
-        dockerfile: Dockerfile
-      volumes:
-        - './resume-app:/usr/src/app'
-        - '/usr/src/app/node_modules'
-      ports:
-        - '4200:4200'
+    app:
+        image: 'aleda145/resume-app:1.0'
+        build: '.'
+        ports:
+            - 80:80
