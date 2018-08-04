@@ -38,6 +38,13 @@
     width:100%;
   }
   .heading{
-    height:0;
+    /* height:0; */
+  }
+
+  .card-info {
+    padding:0;
+  }
+
+  .resume-view {
   }
 }
