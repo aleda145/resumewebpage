@@ -7,6 +7,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { EducationComponent } from './education/education.component';
 
 
 
@@ -15,7 +16,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     HeaderComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    EducationComponent
   ],
   imports: [
     NgbModule.forRoot(),
