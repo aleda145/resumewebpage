@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
     app:
-        image: 'aleda145/resume-app:1.0'
+        image: 'aleda145/resume-app:1.1'
         build: '.'
         ports:
             - 80:80
