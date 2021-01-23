@@ -1,5 +1,5 @@
 # Resume
-This is my resume webpage!
+This is my personal website. Here you can find interesting things!
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
