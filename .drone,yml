@@ -1,0 +1,13 @@
+kind: pipeline
+type: docker
+name: default
+
+- name: publish
+  image: plugins/docker
+  settings:
+    repo: aleda145/resume-app
+    tags: latest
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
