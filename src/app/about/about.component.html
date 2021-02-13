@@ -74,14 +74,21 @@
             <div class="projects">
                 <h4>Projects</h4>
                 <p>A showcase of interesting projects I have been working on</p>
-                <h6><b>Home Server</b></h6>
-                I am currently running a server in my apartment, which dutifully sent this website
-                to you. It is running debian with a bunch of docker containers. I am using
-                <a href="https://traefik.io/" target="_blank">traefik</a>
-                as my reverse proxy. Traefik takes cares of https on all my subdomains,
-                so it becomes really easy to spin new things up. It is as simple as just defining
-                a label for which address the docker container should listen to, making it really
-                nice to use.
+                <h5 id="homeserver"><b>Home Server</b></h5>
+                <p>
+                    I am currently running a server at home, which dutifully sent this website
+                    to you. It is running debian with a bunch of docker containers. I am using
+                    <a href="https://traefik.io/" target="_blank">traefik</a>
+                    as my reverse proxy. Traefik routes my subdomains to exposed docker containers
+                    and will automatically enable https on them too. This makes it
+                    really easy to spin up new services! It is as simple as just defining
+                    a label for which address the docker container should listen to.
+                    In the below picture you can see an overview of the architecture,
+                    and how the different containers interact with each other.
+                </p>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/assets/architecture.svg" class="img-fluid">
+                </div>
                 <h6><b>Elastic </b></h6>
                 <h6><b>CI CD project</b></h6>
                 <h6><b>LARM</b></h6>
