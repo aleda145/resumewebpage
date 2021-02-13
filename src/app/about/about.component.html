@@ -92,8 +92,10 @@
                 <h5 id="elastic"><b>Elastic</b></h5>
                 <p>I have an elastic stack running on docker, as seen in the picture above.
                     I am using the normal elastic stack, so Elasticsearch, Logstash, Kibana and
-                    Beats(Filebeat and Metricbeat). I send my authentication logs from the debian server
-                    containing all the addresses of hackers trying to hack my server to Logstash.
+                    Beats(Filebeat and Metricbeat).
+                    The authentication logs from the debian server
+                    containing all the addresses of hackers trying to hack my server
+                    is sent to Logstash (Airflow is managing Logstash).
                     Logstash then processes it for Elasticsearch, which is then
                     sent to a dashboard in Kibana, that can be viewed
                     <a
