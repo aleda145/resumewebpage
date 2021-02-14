@@ -115,7 +115,27 @@
                     <a
                         href="https://medium.com/swlh/sharing-kibana-guest-dashboards-without-login-fceb6b8df97d">https://medium.com/swlh/sharing-kibana-guest-dashboards-without-login-fceb6b8df97d</a>
                 </p>
-                <h5><b>CI CD project</b></h5>
+                <h5 id="webpipeline"><b>Web pipeline</b></h5>
+                <p>This website is automatically deployed to the server when new commits are pushed
+                    to the master branch. The website is an angular application, which can be viewed
+                    on <a href="https://github.com/aleda145/resumewebpage">github</a>. I have set up
+                    <a href="https://www.drone.io/">drone</a>, which is a self hosted CI/CD service that will
+                    get a hook from github whenever a new commit is pushed to master. The drone runner
+                    can be viewed on <a href="https://drone.dahl.dev/aleda145/resumewebpage/">
+                        drone.dahl.dev/aleda145/resumewebpage/</a>.
+                    The runner will build the supplied Dockerfile in the repo, and sent it up to my
+                    <a href="https://hub.docker.com/u/aleda145">dockerhub account</a>.
+                    Then I have <a href="https://github.com/containrrr/watchtower">Watchtower</a> running in a
+                    container. Watchtower will poll the docker image every 30 seconds,
+                    and if it notices
+                    a change in docker images, it will pull the image, create a new container and
+                    start the service. This will result in a downtime for the website of around 1 second,
+                    which is acceptable since I get very little traffic :)
+                </p>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="/assets/pipeline.png" class="img-fluid">
+                </div>
+
                 <h5><b>LARM</b></h5>
             </div>
         </div>
