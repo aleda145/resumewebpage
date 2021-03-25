@@ -31,11 +31,14 @@ with Diagram("Home Server Architecture", show=False):
         jenkins = Custom("", "./logos/jenkins.png")
         mlflow = Custom("", "./logos/mlflow.png")
         portainer = Custom("", "./logos/portainer.png")
+
         angular >> github >> drone >> dockerhub >> watchtower
+
         airflow = Airflow("Airflow")
         airflow >> logstash
         elastic >> kibana
         watchtower >> angular
+
         traefik = Traefik("Traefik reverse proxy")
         traefik >> angular
         traefik >> drone
@@ -54,7 +57,6 @@ with Diagram("Home Server Architecture", show=False):
         with Cluster("Other"):
             mumble = Custom("Mumble", "./logos/mumble.png")
             factorio = Custom("Factorio", "./logos/factorio.png")
-
             mumble - factorio
 
     debian >> logstash
