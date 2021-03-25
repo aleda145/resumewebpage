@@ -23,3 +23,7 @@ small {
 .linux {
     width: 95%;
 }
+
+.architecture {
+    max-width: 70%;
+}
