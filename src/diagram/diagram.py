@@ -1,11 +1,6 @@
-# diagram.py
-from diagrams import Diagram, Cluster, Edge
-from diagrams.aws.compute import EC2
-from diagrams.aws.database import RDS
-from diagrams.aws.network import ELB
+from diagrams import Diagram, Cluster
 
 from diagrams.onprem.ci import Droneci
-from diagrams.onprem.container import Docker
 from diagrams.onprem.network import Traefik
 from diagrams.onprem.vcs import Github
 
