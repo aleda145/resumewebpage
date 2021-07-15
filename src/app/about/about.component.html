@@ -93,32 +93,6 @@
                 <div class="col-md-12 justify-content-center architecture">
                     <img src="/assets/home_server_architecture.png" class="img-fluid">
                 </div>
-                <h5 id="elastic"><b>Elastic</b></h5>
-                <p>I have an elastic stack running on docker, as seen in the picture above.
-                    I am using the normal elastic stack, so Elasticsearch, Logstash, Kibana and
-                    Beats(Filebeat and Metricbeat).
-                    The authentication logs from the debian server
-                    containing all the addresses of hackers trying to hack my server
-                    is sent to Logstash (Airflow is managing Logstash).
-                    Logstash then processes it for Elasticsearch, which is then
-                    sent to a dashboard in Kibana, that can be viewed
-                    <a
-                        href="https://ssh.dahl.dev/s/public/app/dashboards#/view/45c53a50-2b7a-11eb-8138-5526e648ee71?_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!f%2Cvalue%3A30000)%2Ctime%3A(from%3A'2020-11-14T17%3A14%3A00.319Z'%2Cto%3Anow))">
-                        here!</a>
-
-                </p>
-                <p>Below is a sample of what you would get in the full dashboard:</p>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item"
-                        src="https://ssh.dahl.dev/s/public/app/dashboards#/view/38f3a090-6e33-11eb-881e-e7c2c83fd49b?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!f%2Cvalue%3A15000)%2Ctime%3A(from%3A'2020-11-14T17%3A00%3A00.000Z'%2Cto%3Anow))&hide-filter-bar=true">
-                    </iframe>
-                </div>
-                <p>To make a public dashboard for a locked down elastic stack was surprisingly
-                    not that hard, all that was needed was passing login credentials headers for a
-                    guest user that has very little privileges. I followed this guide for that:
-                    <a
-                        href="https://medium.com/swlh/sharing-kibana-guest-dashboards-without-login-fceb6b8df97d">https://medium.com/swlh/sharing-kibana-guest-dashboards-without-login-fceb6b8df97d</a>
-                </p>
                 <h5 id="webpipeline"><b>Web pipeline</b></h5>
                 <p>This website is automatically deployed to the server when new commits are pushed
                     to the master branch. The website is an angular application, which can be viewed
