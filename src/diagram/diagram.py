@@ -20,6 +20,8 @@ with Diagram("Home Server Architecture", show=False):
         drone = Droneci("Drone")
         jellyfin = Custom("Jellyfin", "./logos/jellyfin.png")
         portainer = Custom("", "./logos/portainer.png")
+        grafana = Custom("", "./logos/grafana.png")
+        superset = Custom("", "./logos/superset.png")
 
         angular >> github >> drone >> dockerhub >> watchtower
 
@@ -30,6 +32,12 @@ with Diagram("Home Server Architecture", show=False):
         traefik >> drone
         traefik >> jellyfin
         traefik >> portainer
+        traefik >> grafana
+        traefik >> superset
 
+        monitoring >> timescaledb
+        
+        timescaledb >> grafana
+        timescaledb >> superset
         mumble = Custom("Mumble", "./logos/mumble.png")
         mumble

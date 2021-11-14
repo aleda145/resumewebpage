@@ -77,6 +77,9 @@
                     some code or distribute services differently on my cluster. I have a stats gatherer
                     written in python that monitors the health of the CPU, hard-drive, RAM and the temperature.
                     Then I also have a shell script that checks my network speed every ten minutes.
+                    The data is then sent to <a href="timescaledb.com">Timescaledb</a>, which is a
+                    database optimized for time series data.
+
                     Since the python script runs in a docker container I noticed some significant slowdowns
                     for my speed measurement if it was running there. I don't know if this is because of docker
                     or python, so instead I opted for just doing a simple shell script scheduled with crontab.
