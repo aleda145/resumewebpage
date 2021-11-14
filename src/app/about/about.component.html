@@ -71,6 +71,23 @@
                 <div class="col-md-12 justify-content-center architecture">
                     <img src="/assets/home_server_architecture.png" class="img-fluid">
                 </div>
+                <h5 id="monitoring"><b>Raspberry Pi Health</b></h5>
+                <p>
+                    Monitoring the health of my infrastrucuture is critical to know if I should rebalance
+                    some code or distribute services differently on my cluster. I have a stats gatherer
+                    written in python that monitors the health of the CPU, hard-drive, RAM and the temperature.
+                    Then I also have a shell script that checks my network speed every ten minutes.
+                    Since the python script runs in a docker container I noticed some significant slowdowns
+                    for my speed measurement if it was running there. I don't know if this is because of docker
+                    or python, so instead I opted for just doing a simple shell script scheduled with crontab.
+                </p>
+                <p>
+                    For live update on the health please checkout <a href="https://grafana.dahl.dev">grafana.dahl.dev</a>
+                </p>
+                <p>
+                    For a summary on the different months see my superset dashboard that aggregates some of the health
+                    data see: <a href="https://superset.dahl.dev/dashboards/2">superset.dahl.dev</a>
+                </p>
                 <h5 id="webpipeline"><b>Web pipeline</b></h5>
                 <p>This website is automatically deployed to the server when new commits are pushed
                     to the master branch. The website is an angular application, which can be viewed
@@ -101,7 +118,6 @@
                         themselves in with their student card, and they were automatically registered in the database.
                         Taking the check in time down to less than 5 minutes.
                     </p>
-                </p>
                 <div class="interests">
                     <h4>Interests</h4>
                     <h6 id="bike"><b>Bicycle Touring</b></h6>
