@@ -32,29 +32,13 @@
                         <img src="/assets/dockerize.jpg" height="200px">
                     </div>
                 </div>
-            </div>
-            <div class="interests">
-                <h4>Interests</h4>
-                <h6 id="bike"><b>Bicycle Touring</b></h6>
-                <p>I rode my bicycle from Connecticut, USA to San Jose, Costa Rica in 2016-2017.
-                    That was pretty cool! It was approximately 10000km. My bike computer broke after
-                    7000km and southern Mexico is not the best place to replace a bike computer,
-                    so I can't know for sure!
-                </p>
-                <p>This was my route:</p>
-                <div class="col-md-12 justify-content-center">
-                    <img src="/assets/bike.png" class="img-fluid">
-                </div>
-                <h6><b>Fermentation and brewing</b></h6>
-                <p>I like fermenting things. I almost always have homemade kimchi in my fridge.
-                    I also bake a sourdough loaf on Sundays. Then I do some homebrewing when the
-                    passion is there. Last I did Sake, japanese rice wine. It was really cool because
-                    it introduced me to koji, a japanese fungus/mold that transforms the starch in
-                    the rice to sugar, which the yeast can then eat to produce alcohol.
-                </p>
                 <h6><b><del>Arch</del> Linux</b></h6>
-                <del>I run Arch Linux on my laptop. It's great!</del> It took 10 months until I bricked my Arch Linux distro and 
-                I now use <a href="https://pop.system76.com/">Pop!_OS</a> instead.
+                <del>I run Arch Linux on my laptop. It's great!</del> It took 10 months until
+                I bricked my Arch Linux distro and I now use 
+                <a href="https://pop.system76.com/">Pop!_OS</a>
+                instead. I think desktop linux gets a bad rap and it can be very easy to use
+                and user friendly if you choose the right distro. I would 
+                Especially Pop! OS.
                 <div class="row">
                     <div class="col-md-12 justify-content-center linux">
                         <img src="/assets/linux.png" class="img-fluid">
@@ -64,10 +48,10 @@
             <div class="projects">
                 <h4>Projects</h4>
                 <p>A showcase of interesting projects I have been working on</p>
-                <h5 id="homeserver"><b>Home Server</b></h5>
+                <h5 id="homeserver"><b>Home Cluster</b></h5>
                 <p>
-                    I am currently running a server at home, which dutifully sent this website
-                    to you. It is running debian with a bunch of docker containers. I am using
+                    I am currently running a small cluster of Raspberry Pis at home, 
+                    which dutifully sent this website to you. I am using
                     <a href="https://traefik.io/" target="_blank">traefik</a>
                     as my reverse proxy. Traefik routes my subdomains to exposed docker containers
                     and will automatically enable https on them too. This makes it
@@ -79,8 +63,8 @@
                 <p>Before I had a draw io diagram for this, but now I generate this picture with
                     code using <a href="https://diagrams.mingrammer.com/">Diagrams as Code</a>.
                     The code for the below picture can be seen <a
-                        href="https://github.com/aleda145/resumewebpage/blob/master/src/diagram/diagram.py">
-                        in my repo</a>.
+                    href="https://github.com/aleda145/resumewebpage/blob/master/src/diagram/diagram.py">
+                    in my repo</a>.
                 </p>
                 <div class="col-md-12 justify-content-center architecture">
                     <img src="/assets/home_server_architecture.png" class="img-fluid">
@@ -91,8 +75,8 @@
                     on <a href="https://github.com/aleda145/resumewebpage">github</a>. I have set up
                     <a href="https://www.drone.io/">drone</a>, which is a self hosted CI/CD service that will
                     get a hook from github whenever a new commit is pushed to master. The drone runner
-                    can be viewed on <a href="https://drone.dahl.dev/aleda145/resumewebpage/">
-                        drone.dahl.dev/aleda145/resumewebpage/</a>.
+                    can be viewed on 
+                    <a href="https://drone.dahl.dev/aleda145/resumewebpage/">drone.dahl.dev/aleda145/resumewebpage/</a>.
                     The runner will build the supplied Dockerfile in the repo, and sent it up to my
                     <a href="https://hub.docker.com/u/aleda145">dockerhub account</a>.
                     Then I have <a href="https://github.com/containrrr/watchtower">Watchtower</a> running in a
@@ -101,47 +85,66 @@
                     a change in docker images, it will pull the image, create a new container and
                     start the service. This will result in a downtime for the website of around 1 second,
                     which is acceptable since I get very little traffic :)
-                </p>
-                <div class="col-md-12 justify-content-center">
-                    <img src="/assets/web_pipeline.png" class="img-fluid">
-                </div>
-                <h5 id="LARM"><b>Head of IT at LARM</b></h5>
-                <p>I was head of IT for <a href="https://larm.lintek.liu.se/">LARM</a> in 2019.
-                    I did some cool things to make the fair run as smoothly as possible.
-                    I launched the usage of RFID readers for checking into events. The previous process
-                    was students walking up to a desk, stating their name and were checked off in an
-                    Excel sheet. This was a tedious process that took at least 10 minutes when you have
-                    300 students going to an event. My implementation meant that the students could check
-                    themselves in with their student card, and they were automatically registered in the database.
-                    Taking the check in time down to less than 5 minutes.
-                </p>
-                <p>
-                    Another thing was the scheduling of interviews during the fair day. These
-                    interviews are typical in Sweden, where they are called "kontaktsamtal".
-                    Since most career fairs are only one day it is hard to create a
-                    schedule that works for all companies as well as the students.
-                    To further complicate things, students that are chosen
-                    for one interview are usually also chosen for another,
-                    making it very hard to successfully schedule this. When updating
-                    one student, the errors will cascade and it will be a big mess.
-                    This whole process took around 40 hours of full time work for two workers.
-                    After some contemplation I figured out that this was an
-                    <a href="https://en.wikipedia.org/wiki/Assignment_problem">assignment problem</a>.
-                    After some debating with my local optimization professor, shout out to
-                    <a href="https://users.mai.liu.se/nilqu94/">Nils-Hassan!</a>
-                    I arrived at the following optimization problem:
-                </p>
-                <div class="col-md-12 justify-content-center">
-                    <img src="/assets/model.png" class="img-fluid">
-                </div>
-
-                <p>Which could then be solved with an optimization solver. I chose Gurobi for this.
-                    See the code
-                    <a href="https://github.com/aleda145/interview-scheduling-kontaktsamtal-">
+                    </p>
+                    <div class="col-md-12 justify-content-center">
+                        <img src="/assets/web_pipeline.png" class="img-fluid">
+                    </div>
+                    <h5 id="LARM"><b>Head of IT at LARM</b></h5>
+                    <p>I was head of IT for <a href="https://larm.lintek.liu.se/">LARM</a> in 2019.
+                        I did some cool things to make the fair run as smoothly as possible.
+                        I launched the usage of RFID readers for checking into events. The previous process
+                        was students walking up to a desk, stating their name and were checked off in an
+                        Excel sheet. This was a tedious process that took at least 10 minutes when you have
+                        300 students going to an event. My implementation meant that the students could check
+                        themselves in with their student card, and they were automatically registered in the database.
+                        Taking the check in time down to less than 5 minutes.
+                    </p>
+                    <p>
+                        Another thing was the scheduling of interviews during the fair day. These
+                        interviews are typical in Sweden, where they are called "kontaktsamtal".
+                        Since most career fairs are only one day it is hard to create a
+                        schedule that works for all companies as well as the students.
+                        To further complicate things, students that are chosen
+                        for one interview are usually also chosen for another,
+                        making it very hard to successfully schedule this. When updating
+                        one student, the errors will cascade and it will be a big mess.
+                        This whole process took around 40 hours of full time work for two workers.
+                        After some contemplation I figured out that this was an
+                        <a href="https://en.wikipedia.org/wiki/Assignment_problem">assignment problem</a>.
+                        After some debating with my local optimization professor, shout out to
+                        <a href="https://users.mai.liu.se/nilqu94/">Nils-Hassan!</a>
+                        I arrived at the following optimization problem:
+                    </p>
+                    <div class="col-md-12 justify-content-center">
+                        <img src="/assets/model.png" class="img-fluid">
+                    </div>
+                    
+                    <p>Which could then be solved with an optimization solver. I chose Gurobi for this.
+                        See the code
+                        <a href="https://github.com/aleda145/interview-scheduling-kontaktsamtal-">
                         here</a>.
-                    If I had done this again today I would have used Google's
+                        If I had done this again today I would have used Google's
                     <a href="https://developers.google.com/optimization">OR tools</a> instead.
                 </p>
+                <div class="interests">
+                    <h4>Interests</h4>
+                    <h6 id="bike"><b>Bicycle Touring</b></h6>
+                    <p>I rode my bicycle from Connecticut, USA to San Jose, Costa Rica in 2016-2017.
+                        That was pretty cool! It was approximately 10000km. My bike computer broke after
+                        7000km and southern Mexico is not the best place to replace a bike computer,
+                        so I can't know for sure!
+                    </p>
+                    <p>This was my route:</p>
+                    <div class="col-md-12 justify-content-center">
+                        <img src="/assets/bike.png" class="img-fluid">
+                    </div>
+                    <h6><b>Fermentation and brewing</b></h6>
+                    <p>I like fermenting things. I almost always have homemade kimchi in my fridge.
+                        Then I also do some homebrewing. Last I did Sake, japanese rice wine. It was really cool because
+                        it introduced me to koji, a japanese fungus/mold that transforms the starch in
+                        the rice to sugar, which the yeast can then eat to produce alcohol.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
