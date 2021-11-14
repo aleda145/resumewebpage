@@ -101,32 +101,6 @@
                         themselves in with their student card, and they were automatically registered in the database.
                         Taking the check in time down to less than 5 minutes.
                     </p>
-                    <p>
-                        Another thing was the scheduling of interviews during the fair day. These
-                        interviews are typical in Sweden, where they are called "kontaktsamtal".
-                        Since most career fairs are only one day it is hard to create a
-                        schedule that works for all companies as well as the students.
-                        To further complicate things, students that are chosen
-                        for one interview are usually also chosen for another,
-                        making it very hard to successfully schedule this. When updating
-                        one student, the errors will cascade and it will be a big mess.
-                        This whole process took around 40 hours of full time work for two workers.
-                        After some contemplation I figured out that this was an
-                        <a href="https://en.wikipedia.org/wiki/Assignment_problem">assignment problem</a>.
-                        After some debating with my local optimization professor, shout out to
-                        <a href="https://users.mai.liu.se/nilqu94/">Nils-Hassan!</a>
-                        I arrived at the following optimization problem:
-                    </p>
-                    <div class="col-md-12 justify-content-center">
-                        <img src="/assets/model.png" class="img-fluid">
-                    </div>
-                    
-                    <p>Which could then be solved with an optimization solver. I chose Gurobi for this.
-                        See the code
-                        <a href="https://github.com/aleda145/interview-scheduling-kontaktsamtal-">
-                        here</a>.
-                        If I had done this again today I would have used Google's
-                    <a href="https://developers.google.com/optimization">OR tools</a> instead.
                 </p>
                 <div class="interests">
                     <h4>Interests</h4>
