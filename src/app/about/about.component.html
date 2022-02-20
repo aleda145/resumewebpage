@@ -34,7 +34,7 @@
                 </div>
                 <h6><b><del>Arch</del> Linux</b></h6>
                 <del>I run Arch Linux on my laptop. It's great!</del> It took 10 months until
-                I bricked my Arch Linux distro and I now use 
+                I bricked my Arch Linux distro and I now use
                 <a href="https://pop.system76.com/">Pop!_OS</a>
                 instead. I think desktop linux gets a bad rap and it can be very easy to use
                 and user friendly if you choose the right distro, like Pop!_OS.
@@ -52,7 +52,7 @@
                 <p>A showcase of interesting projects I have been working on</p>
                 <h5 id="homeserver"><b>Home Cluster</b></h5>
                 <p>
-                    I am currently running a small cluster of Raspberry Pis at home, 
+                    I am currently running a small cluster of Raspberry Pis at home,
                     which dutifully sent this website to you. I am using
                     <a href="https://traefik.io/" target="_blank">traefik</a>
                     as my reverse proxy. Traefik routes my subdomains to exposed docker containers
@@ -65,8 +65,8 @@
                 <p>Before I had a draw io diagram for this, but now I generate this picture with
                     code using <a href="https://diagrams.mingrammer.com/">Diagrams as Code</a>.
                     The code for the below picture can be seen <a
-                    href="https://github.com/aleda145/resumewebpage/blob/master/src/diagram/diagram.py">
-                    in my repo</a>.
+                        href="https://github.com/aleda145/resumewebpage/blob/master/src/diagram/diagram.py">
+                        in my repo</a>.
                 </p>
                 <div class="col-md-12 justify-content-center architecture">
                     <img src="/assets/home_server_architecture.png" class="img-fluid">
@@ -85,7 +85,8 @@
                     or python, so instead I opted for just doing a simple shell script scheduled with crontab.
                 </p>
                 <p>
-                    For live update on the health please checkout <a href="https://grafana.dahl.dev">grafana.dahl.dev</a>
+                    For live update on the health please checkout <a
+                        href="https://grafana.dahl.dev">grafana.dahl.dev</a>
                 </p>
                 <p>
                     For a summary on the different months see my superset dashboard that aggregates some of the health
@@ -97,7 +98,7 @@
                     on <a href="https://github.com/aleda145/resumewebpage">github</a>. I have set up
                     <a href="https://www.drone.io/">drone</a>, which is a self hosted CI/CD service that will
                     get a hook from github whenever a new commit is pushed to master. The drone runner
-                    can be viewed on 
+                    can be viewed on
                     <a href="https://drone.dahl.dev/aleda145/resumewebpage/">drone.dahl.dev/aleda145/resumewebpage/</a>.
                     The runner will build the supplied Dockerfile in the repo, and sent it up to my
                     <a href="https://hub.docker.com/u/aleda145">dockerhub account</a>.
@@ -107,33 +108,33 @@
                     a change in docker images, it will pull the image, create a new container and
                     start the service. This will result in a downtime for the website of around 1 second,
                     which is acceptable since I get very little traffic :)
-                    </p>
-                    <div class="col-md-12 justify-content-center">
-                        <img src="/assets/web_pipeline.png" class="img-fluid">
-                    </div>
-                    <h5 id="LARM"><b>Head of IT at LARM</b></h5>
-                    <p>I was head of IT for <a href="https://larm.lintek.liu.se/">LARM</a> in 2019.
-                        I did some cool things to make the fair run as smoothly as possible.
-                        I launched the usage of RFID readers for checking into events. The previous process
-                        was students walking up to a desk, stating their name and were checked off in an
-                        Excel sheet. This was a tedious process that took at least 10 minutes when you have
-                        300 students going to an event. My implementation meant that the students could check
-                        themselves in with their student card, and they were automatically registered in the database.
-                        Taking the check in time down to less than 5 minutes.
-                    </p>
+                </p>
+                <div class="col-md-12 justify-content-center">
+                    <img src="/assets/web_pipeline.png" class="img-fluid">
+                </div>
+                <h5 id="LARM"><b>Head of IT at LARM</b></h5>
+                <p>I was head of IT for <a href="https://larm.lintek.liu.se/">LARM</a> in 2019.
+                    I did some cool things to make the fair run as smoothly as possible.
+                    I launched the usage of RFID readers for checking into events. The previous process
+                    was students walking up to a desk, stating their name and were checked off in an
+                    Excel sheet. This was a tedious process that took at least 10 minutes when you have
+                    300 students going to an event. My implementation meant that the students could check
+                    themselves in with their student card, and they were automatically registered in the database.
+                    Taking the check in time down to less than 5 minutes.
+                </p>
                 <h5 id="enrollment"><b>Superset Dashboard for Swedish Higher Education Enrollment</b></h5>
-                    <p>
-                        I was curious exploring the statistics data for enrollment, questions like,
-                        how has the gender ratio changed for higher education in the last 20 years?
-                        or, what is the normal age for a student that is enrolled in an engineering degree?
+                <p>
+                    I was curious exploring the statistics data for enrollment, questions like,
+                    how has the gender ratio changed for higher education in the last 20 years?
+                    or, what is the normal age for a student that is enrolled in an engineering degree?
 
-                        I exported the data from UKÄ (link) and inserted it into a Postgres database.
-                        The postgres database was connected to Apache Superset, an Open Source
-                        dashboarding tool. Then the data crunched there.
-                        
-                        Check it out at <a href="https://superset.dahl.dev/dashboards/1">superset.dahl.dev</a>!
-                        Maybe you can find some interesting insight yourself?
-                    </p>
+                    I exported the data from UKÄ (link) and inserted it into a Postgres database.
+                    The postgres database was connected to Apache Superset, an Open Source
+                    dashboarding tool. Then the data crunched there.
+
+                    Check it out at <a href="https://superset.dahl.dev/dashboards/1">superset.dahl.dev</a>!
+                    Maybe you can find some interesting insight yourself?
+                </p>
                 <div class="interests">
                     <h4>Interests</h4>
                     <h6 id="bike"><b>Bicycle Touring</b></h6>
