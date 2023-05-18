@@ -1,4 +1,4 @@
-FROM arm32v7/node:15.6.0-alpine3.12 AS build
+FROM node:15.6.0-alpine3.12 AS build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm install
